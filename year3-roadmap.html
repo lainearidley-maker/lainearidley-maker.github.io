@@ -1,0 +1,875 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Year 3 Career Roadmap — Qualify & Launch</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Source+Sans+3:wght@300;400;600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --navy: #1a2744;
+    --blue: #2356a8;
+    --mid: #3a72c8;
+    --accent: #e8a020;
+    --gold: #c8860a;
+    --green: #1e6b4a;
+    --dark-green: #164d36;
+    --light-green: #eaf5ee;
+    --light-blue: #eaf0fb;
+    --light-grey: #f5f6f8;
+    --teal: #1a5c6e;
+    --light-teal: #e6f4f7;
+    --text: #1c1e26;
+    --muted: #5a6070;
+    --white: #ffffff;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: 'Source Sans 3', sans-serif;
+    background: #eef1f7;
+    color: var(--text);
+    font-size: 15px;
+    line-height: 1.7;
+  }
+  .page { max-width: 960px; margin: 0 auto; padding-bottom: 60px; }
+
+  /* HEADER */
+  .header {
+    background: linear-gradient(135deg, #1a3820 0%, var(--green) 60%, #2a9e6a 100%);
+    padding: 56px 48px 44px;
+    position: relative; overflow: hidden;
+  }
+  .header::before {
+    content: ''; position: absolute; top: -80px; right: -80px;
+    width: 320px; height: 320px; border-radius: 50%;
+    background: rgba(255,255,255,0.05);
+  }
+  .header::after {
+    content: ''; position: absolute; bottom: -50px; left: 240px;
+    width: 220px; height: 220px; border-radius: 50%;
+    background: rgba(232,160,32,0.12);
+  }
+  .series-label {
+    font-size: 11px; font-weight: 700; letter-spacing: 3px;
+    text-transform: uppercase; color: var(--accent); margin-bottom: 14px;
+  }
+  .header h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 44px; font-weight: 900;
+    color: #fff; line-height: 1.15; margin-bottom: 10px;
+  }
+  .header h1 span { color: var(--accent); }
+  .header .subtitle {
+    color: rgba(255,255,255,0.75);
+    font-size: 15px; font-weight: 300; margin-bottom: 28px;
+  }
+  .header-pills { display: flex; gap: 10px; flex-wrap: wrap; }
+  .pill {
+    background: rgba(255,255,255,0.12);
+    border: 1px solid rgba(255,255,255,0.2);
+    color: #fff; font-size: 12px; font-weight: 600;
+    padding: 6px 14px; border-radius: 20px;
+  }
+
+  /* NAV */
+  .nav-strip { background: var(--navy); display: flex; }
+  .nav-item {
+    flex: 1; text-align: center; padding: 14px 8px;
+    font-size: 12px; font-weight: 700; letter-spacing: 1px;
+    text-transform: uppercase; color: rgba(255,255,255,0.4);
+    border-right: 1px solid rgba(255,255,255,0.08);
+  }
+  .nav-item.done { color: rgba(255,255,255,0.55); }
+  .nav-item.active { color: var(--accent); border-bottom: 3px solid var(--accent); }
+
+  /* CONTENT */
+  .content { padding: 40px 48px; }
+
+  /* INTRO */
+  .intro-box {
+    background: var(--white);
+    border-left: 5px solid var(--green);
+    border-radius: 0 8px 8px 0;
+    padding: 24px 28px; margin-bottom: 36px;
+    box-shadow: 0 2px 12px rgba(30,107,74,0.08);
+  }
+  .intro-box h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 20px; color: var(--navy); margin-bottom: 10px;
+  }
+  .intro-box p { color: var(--muted); font-size: 14.5px; margin-bottom: 8px; }
+
+  /* ACHIEVEMENT STRIP */
+  .achievement-strip {
+    display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px;
+    margin-bottom: 36px;
+  }
+  .achievement {
+    background: var(--white); border-radius: 10px;
+    padding: 18px; text-align: center;
+    box-shadow: 0 2px 10px rgba(26,39,68,0.06);
+    border-bottom: 4px solid var(--green);
+  }
+  .achievement .big {
+    font-family: 'Playfair Display', serif;
+    font-size: 30px; font-weight: 700; color: var(--green);
+  }
+  .achievement p { font-size: 11px; color: var(--muted); margin-top: 4px; text-transform: uppercase; letter-spacing: 1px; font-weight: 600; }
+
+  /* SECTION HEADERS */
+  .section-header { display: flex; align-items: center; gap: 14px; margin: 40px 0 18px; }
+  .section-icon {
+    width: 42px; height: 42px; border-radius: 10px;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 20px; flex-shrink: 0;
+  }
+  .section-header h2 { font-family: 'Playfair Display', serif; font-size: 22px; color: var(--navy); }
+  .section-period { font-size: 12px; font-weight: 600; color: var(--muted); letter-spacing: 1px; text-transform: uppercase; }
+
+  /* CARDS */
+  .card {
+    background: var(--white); border-radius: 10px;
+    padding: 24px 28px; margin-bottom: 16px;
+    box-shadow: 0 2px 10px rgba(26,39,68,0.06);
+  }
+  .card h3 { font-size: 16px; font-weight: 700; color: var(--navy); margin-bottom: 8px; }
+  .card p { color: var(--muted); font-size: 14px; margin-bottom: 10px; }
+  .card-tag {
+    display: inline-block; font-size: 11px; font-weight: 700;
+    letter-spacing: 1px; text-transform: uppercase;
+    padding: 3px 10px; border-radius: 4px; margin-bottom: 10px;
+  }
+  .tag-green { background: var(--light-green); color: var(--green); }
+  .tag-blue { background: var(--light-blue); color: var(--blue); }
+  .tag-teal { background: var(--light-teal); color: var(--teal); }
+  .tag-orange { background: #fef3e2; color: #b57a10; }
+  .tag-gold { background: #fef8e6; color: var(--gold); }
+  .tag-red { background: #fdecea; color: #b02a1e; }
+
+  .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-bottom: 16px; }
+  .three-col { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 16px; margin-bottom: 16px; }
+
+  /* VOLUNTEER CARDS */
+  .vol-card {
+    background: var(--white); border-radius: 10px;
+    padding: 22px 26px; margin-bottom: 16px;
+    box-shadow: 0 2px 10px rgba(26,39,68,0.06);
+    border-top: 4px solid var(--green);
+  }
+  .vol-card h3 { font-size: 15px; font-weight: 700; color: var(--navy); margin-bottom: 4px; }
+  .vol-card .distance {
+    font-size: 12px; font-weight: 600; color: var(--green);
+    text-transform: uppercase; letter-spacing: 1px; margin-bottom: 10px;
+  }
+  .vol-card p { font-size: 13.5px; color: var(--muted); margin-bottom: 10px; }
+  .vol-detail { font-size: 13px; color: var(--text); padding: 2px 0; }
+  .vol-detail span { font-weight: 600; color: var(--navy); }
+  .vol-card .highlight-box {
+    background: var(--light-green); border-radius: 6px;
+    padding: 10px 14px; margin-top: 12px;
+    font-size: 13px; color: var(--green); font-weight: 600;
+  }
+
+  /* TABLE */
+  table { width: 100%; border-collapse: collapse; font-size: 13.5px; }
+  thead tr { background: var(--green); }
+  thead th { padding: 12px 14px; text-align: left; color: #fff; font-weight: 600; font-size: 12px; letter-spacing: 0.5px; }
+  tbody tr:nth-child(even) { background: var(--light-grey); }
+  tbody tr:nth-child(odd) { background: var(--white); }
+  tbody td { padding: 11px 14px; color: var(--text); border-bottom: 1px solid #e8eaf0; vertical-align: top; }
+  .badge { display: inline-block; padding: 2px 8px; border-radius: 4px; font-size: 11px; font-weight: 700; }
+  .badge-free { background: var(--light-green); color: var(--green); }
+  .badge-low { background: #fef3e2; color: #b57a10; }
+  .badge-high { background: var(--light-blue); color: var(--blue); }
+  .badge-essential { background: #fdecea; color: #b02a1e; }
+  .badge-green { background: var(--light-green); color: var(--green); }
+
+  /* QUALIFICATION TIMELINE */
+  .timeline { position: relative; padding-left: 32px; margin-bottom: 16px; }
+  .timeline::before {
+    content: ''; position: absolute; left: 10px; top: 0; bottom: 0;
+    width: 2px; background: var(--green); opacity: 0.3;
+  }
+  .timeline-item { position: relative; margin-bottom: 24px; }
+  .timeline-item::before {
+    content: ''; position: absolute; left: -26px; top: 6px;
+    width: 14px; height: 14px; border-radius: 50%;
+    background: var(--green); border: 2px solid #fff;
+    box-shadow: 0 0 0 2px var(--green);
+  }
+  .timeline-item h3 { font-size: 15px; font-weight: 700; color: var(--navy); margin-bottom: 4px; }
+  .timeline-item .time { font-size: 11px; font-weight: 700; color: var(--green); letter-spacing: 1px; text-transform: uppercase; margin-bottom: 6px; }
+  .timeline-item p { font-size: 13.5px; color: var(--muted); }
+
+  /* BACP BOX */
+  .bacp-box {
+    background: linear-gradient(135deg, var(--dark-green), var(--green));
+    border-radius: 10px; padding: 28px 32px; margin-bottom: 16px; color: #fff;
+  }
+  .bacp-box h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 22px; margin-bottom: 12px; color: #fff;
+  }
+  .bacp-box p { font-size: 14px; opacity: 0.85; margin-bottom: 10px; }
+  .bacp-steps { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-top: 16px; }
+  .bacp-step {
+    background: rgba(255,255,255,0.1); border-radius: 8px;
+    padding: 16px; text-align: center;
+  }
+  .bacp-step .step-num {
+    font-family: 'Playfair Display', serif;
+    font-size: 28px; font-weight: 700; color: var(--accent);
+  }
+  .bacp-step p { font-size: 12px; opacity: 0.85; margin-top: 4px; }
+
+  /* POST QUAL SALARY */
+  .salary-grid {
+    display: grid; grid-template-columns: 1fr 1fr; gap: 16px;
+    margin-bottom: 16px;
+  }
+  .salary-card {
+    border-radius: 10px; padding: 22px 24px;
+    box-shadow: 0 2px 10px rgba(26,39,68,0.06);
+  }
+  .salary-card.entry { background: var(--light-blue); border-top: 4px solid var(--blue); }
+  .salary-card.mid { background: var(--light-teal); border-top: 4px solid var(--teal); }
+  .salary-card.senior { background: var(--light-green); border-top: 4px solid var(--green); }
+  .salary-card.private { background: #fef8e6; border-top: 4px solid var(--gold); }
+  .salary-card .label { font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; color: var(--muted); margin-bottom: 6px; }
+  .salary-card .amount {
+    font-family: 'Playfair Display', serif;
+    font-size: 28px; font-weight: 700;
+  }
+  .salary-card.entry .amount { color: var(--blue); }
+  .salary-card.mid .amount { color: var(--teal); }
+  .salary-card.senior .amount { color: var(--green); }
+  .salary-card.private .amount { color: var(--gold); }
+  .salary-card .detail { font-size: 12px; color: var(--muted); margin-top: 6px; }
+
+  /* POST QUAL PATHWAY */
+  .pathway-grid {
+    display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 16px;
+    margin-bottom: 16px;
+  }
+  .pathway-card {
+    background: var(--white); border-radius: 10px;
+    padding: 20px; box-shadow: 0 2px 10px rgba(26,39,68,0.06);
+  }
+  .pathway-card .icon { font-size: 24px; margin-bottom: 10px; }
+  .pathway-card h3 { font-size: 14px; font-weight: 700; color: var(--navy); margin-bottom: 6px; }
+  .pathway-card p { font-size: 12.5px; color: var(--muted); }
+  .pathway-card .timeline-note {
+    display: inline-block; margin-top: 10px;
+    font-size: 11px; font-weight: 700; color: var(--green);
+    background: var(--light-green); padding: 3px 8px; border-radius: 4px;
+    text-transform: uppercase; letter-spacing: 0.5px;
+  }
+
+  /* ALERT */
+  .alert-box {
+    background: #fef3e2; border-left: 5px solid var(--accent);
+    border-radius: 0 8px 8px 0; padding: 20px 24px; margin-bottom: 16px;
+  }
+  .alert-box h3 { font-size: 15px; font-weight: 700; color: #7a5010; margin-bottom: 6px; }
+  .alert-box p { font-size: 13.5px; color: #8a6020; margin: 0; }
+
+  /* CHECKLIST */
+  .checklist { background: var(--light-green); border-radius: 10px; padding: 28px 32px; margin-top: 36px; }
+  .checklist h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 20px; color: var(--green); margin-bottom: 18px;
+  }
+  .check-item {
+    display: flex; align-items: flex-start; gap: 12px;
+    padding: 9px 0; border-bottom: 1px solid rgba(30,107,74,0.12);
+    font-size: 14px;
+  }
+  .check-item:last-child { border-bottom: none; }
+  .check-icon {
+    width: 22px; height: 22px; border-radius: 50%;
+    background: var(--green); color: #fff;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 12px; flex-shrink: 0; margin-top: 1px;
+  }
+  .check-item strong { color: var(--navy); }
+
+  /* FINAL BANNER */
+  .final-banner {
+    background: linear-gradient(135deg, var(--navy) 0%, var(--blue) 50%, var(--green) 100%);
+    border-radius: 10px; padding: 40px 40px;
+    text-align: center; margin-top: 36px; color: #fff;
+  }
+  .final-banner h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 28px; font-weight: 900; margin-bottom: 12px;
+  }
+  .final-banner p { font-size: 15px; opacity: 0.85; max-width: 640px; margin: 0 auto 20px; }
+  .final-banner .qual-pills { display: flex; gap: 10px; flex-wrap: wrap; justify-content: center; margin-top: 20px; }
+  .final-banner .qual-pill {
+    background: rgba(255,255,255,0.15); border: 1px solid rgba(255,255,255,0.25);
+    padding: 8px 16px; border-radius: 20px;
+    font-size: 13px; font-weight: 600; color: #fff;
+  }
+
+  .divider { height: 1px; background: #dde2ee; margin: 36px 0; }
+
+  /* FOOTER */
+  .footer {
+    background: var(--navy); padding: 20px 48px;
+    display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px;
+  }
+  .footer p { color: rgba(255,255,255,0.45); font-size: 12px; }
+  .footer .page-num { color: var(--accent); font-weight: 700; font-size: 13px; }
+</style>
+</head>
+<body>
+<div class="page">
+
+  <!-- HEADER -->
+  <div class="header">
+    <div class="series-label">3-Year Career Roadmap &mdash; BSc Psychology &amp; Forensics + Diploma in Counselling &amp; Psychotherapy</div>
+    <h1>Year 3: <span>Qualify &amp; Launch</span></h1>
+    <div class="subtitle">September 2028 &ndash; Summer 2029 &nbsp;&bull;&nbsp; Carmarthen &amp; West Wales (SA31 | 40-mile radius)</div>
+    <div class="header-pills">
+      <div class="pill">OU Stage 3 &amp; Dissertation</div>
+      <div class="pill">Diploma Final Year</div>
+      <div class="pill">BACP Membership</div>
+      <div class="pill">Forensic Placement</div>
+      <div class="pill">First Paid Role</div>
+    </div>
+  </div>
+
+  <!-- NAV -->
+  <div class="nav-strip">
+    <div class="nav-item done">&#10003; Year 1 &mdash; Foundation</div>
+    <div class="nav-item done">&#10003; Year 2 &mdash; Specialism</div>
+    <div class="nav-item active">&#9679; Year 3 &mdash; Qualify &amp; Launch</div>
+  </div>
+
+  <div class="content">
+
+    <!-- INTRO -->
+    <div class="intro-box">
+      <h2>Year 3 — This Is What Everything Has Been Building Toward</h2>
+      <p>Year 3 is your qualifying year. By the end of Summer 2029 you will hold a BSc in Psychology &amp; Forensics and a Diploma in Counselling &amp; Psychotherapy — a combination that very few practitioners in West Wales possess. Your OU dissertation becomes a genuine career asset, your volunteer portfolio demonstrates three years of committed real-world experience, and you will be ready to apply for Band 5 and 6 NHS roles with a forensic specialism that puts you ahead of almost every other applicant.</p>
+      <p>This year is also about transition — from student to professional. BACP membership, your first paid applications, building a supervisor relationship for post-qualification accreditation hours, and beginning to position yourself for the career arc you want.</p>
+    </div>
+
+    <!-- ACHIEVEMENT STRIP -->
+    <div class="achievement-strip">
+      <div class="achievement">
+        <div class="big">2</div>
+        <p>Qualifications earned this year</p>
+      </div>
+      <div class="achievement">
+        <div class="big">150+</div>
+        <p>Supervised client hours by qualification</p>
+      </div>
+      <div class="achievement">
+        <div class="big">8+</div>
+        <p>Short course certificates on CV</p>
+      </div>
+      <div class="achievement">
+        <div class="big">4+</div>
+        <p>Volunteer / placement roles completed</p>
+      </div>
+    </div>
+
+    <!-- DEGREE -->
+    <div class="section-header">
+      <div class="section-icon" style="background:var(--light-blue);">🎓</div>
+      <div>
+        <div class="section-period">Open University</div>
+        <h2>Degree: OU Stage 3 &amp; Dissertation</h2>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-tag tag-blue">BSc Psychology &amp; Forensics &mdash; Final Year</div>
+      <h3>Applied Forensic Psychology &amp; Research Project</h3>
+      <p>Stage 3 is where your degree comes fully into focus. You apply psychology directly to criminal justice contexts &mdash; offender behaviour, victimology, psychology in prisons, and the interface between mental health and the law. Your independent research project is the centrepiece of this year.</p>
+      <ul style="padding-left:18px; color:#5a6070; font-size:14px; margin-top:6px;">
+        <li>Forensic psychology in practice &mdash; courts, prisons, probation, secure settings</li>
+        <li>Offender rehabilitation and desistance theory</li>
+        <li>Victimology and trauma</li>
+        <li>Psychology of the legal system and expert witness practice</li>
+        <li>Independent research project &mdash; your dissertation</li>
+      </ul>
+    </div>
+
+    <div class="card" style="border-left:4px solid var(--accent);">
+      <div class="card-tag tag-orange">Your Dissertation &mdash; Make It Count</div>
+      <h3>Choose a Topic That Opens Doors</h3>
+      <p>Your dissertation is a talking point in every interview for the next five years. Choose a topic that directly intersects your two qualifications and your local context. Here are three strong options for your situation:</p>
+      <div class="three-col" style="margin-top:14px; margin-bottom:0;">
+        <div style="background:var(--light-blue); border-radius:8px; padding:14px;">
+          <div style="font-size:12px; font-weight:700; color:var(--blue); text-transform:uppercase; letter-spacing:1px; margin-bottom:6px;">Option 1</div>
+          <div style="font-size:13.5px; font-weight:600; color:var(--navy);">Trauma-informed counselling approaches with offenders in community settings in West Wales</div>
+        </div>
+        <div style="background:var(--light-teal); border-radius:8px; padding:14px;">
+          <div style="font-size:12px; font-weight:700; color:var(--teal); text-transform:uppercase; letter-spacing:1px; margin-bottom:6px;">Option 2</div>
+          <div style="font-size:13.5px; font-weight:600; color:var(--navy);">Barriers to mental health support for people in contact with the criminal justice system in rural Wales</div>
+        </div>
+        <div style="background:var(--light-green); border-radius:8px; padding:14px;">
+          <div style="font-size:12px; font-weight:700; color:var(--green); text-transform:uppercase; letter-spacing:1px; margin-bottom:6px;">Option 3</div>
+          <div style="font-size:13.5px; font-weight:600; color:var(--navy);">The therapeutic relationship in forensic counselling &mdash; practitioner experiences in secure settings</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- BPS ACCREDITATION NOTE -->
+    <div class="alert-box">
+      <h3>&#9888; Check Your BPS Accreditation Status</h3>
+      <p>On completing your OU BSc, check whether your degree is accredited by the British Psychological Society (BPS). If it is, you will be eligible for <strong>Graduate Basis for Chartership (GBC)</strong> &mdash; the essential gateway to becoming a Chartered Psychologist and to postgraduate clinical or forensic psychology training. Contact the OU or check the BPS website at <strong>bps.org.uk</strong> to confirm your status immediately on graduating.</p>
+    </div>
+
+    <!-- DIPLOMA -->
+    <div class="section-header">
+      <div class="section-icon" style="background:var(--light-green);">📋</div>
+      <div>
+        <div class="section-period">Counselling Diploma</div>
+        <h2>Diploma Final Year &mdash; Qualify as a Counsellor</h2>
+      </div>
+    </div>
+
+    <div class="two-col">
+      <div class="card">
+        <div class="card-tag tag-green">Complete Your Hours</div>
+        <h3>Final Supervised Client Hours</h3>
+        <p>Complete your remaining supervised client hours to meet your diploma's qualification threshold. Ensure your supervisor has signed off each block of hours and that your reflective journal is comprehensive and up to date.</p>
+        <ul style="padding-left:18px; color:#5a6070; font-size:14px; margin-top:6px;">
+          <li>Hours log: signed, dated, complete</li>
+          <li>Supervision records: documented throughout</li>
+          <li>Personal therapy: receipts and records kept</li>
+          <li>Reflective journal: 3 years of evidence</li>
+        </ul>
+      </div>
+      <div class="card">
+        <div class="card-tag tag-green">On Qualifying</div>
+        <h3>Apply for BACP Membership Immediately</h3>
+        <p>The moment you receive your diploma certificate, apply for BACP Registered Member status. This is the professional credential that appears on your CV and makes you eligible to practise ethically and independently. Do not delay this step.</p>
+        <ul style="padding-left:18px; color:#5a6070; font-size:14px; margin-top:6px;">
+          <li>Apply at bacp.co.uk as soon as you qualify</li>
+          <li>Begin planning for BACP Accreditation (450 post-qual hours)</li>
+          <li>Identify a post-qualification supervisor now</li>
+          <li>Get professional indemnity insurance if going private</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- BACP PATHWAY -->
+    <div class="bacp-box">
+      <h2>Your BACP Accreditation Pathway</h2>
+      <p>BACP Accreditation is the gold standard credential that unlocks senior NHS roles, higher private rates, and professional recognition. You cannot apply immediately &mdash; it requires post-qualification supervised hours. Here is your route:</p>
+      <div class="bacp-steps">
+        <div class="bacp-step">
+          <div class="step-num">1</div>
+          <p><strong>Qualify &amp; Join BACP</strong><br>Summer 2029 &mdash; Apply for Registered Member status on receiving your diploma</p>
+        </div>
+        <div class="bacp-step">
+          <div class="step-num">2</div>
+          <p><strong>Accumulate 450 Hours</strong><br>Years 4&ndash;5 &mdash; Post-qualification supervised client hours in paid or volunteer roles</p>
+        </div>
+        <div class="bacp-step">
+          <div class="step-num">3</div>
+          <p><strong>Apply for BACP Accreditation</strong><br>Year 5&ndash;6 &mdash; Submit portfolio, case studies and supervision evidence for full accreditation</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- SHORT COURSES -->
+    <div class="section-header">
+      <div class="section-icon" style="background:#fef8e6);">📜</div>
+      <div>
+        <div class="section-period">Final Year CV Building</div>
+        <h2>Short Courses &amp; CPD &mdash; Year 3</h2>
+      </div>
+    </div>
+
+    <p style="color:var(--muted); font-size:14px; margin-bottom:20px;">Year 3 courses push you to postgraduate and specialist level &mdash; these signal to employers that you are not just a newly qualified counsellor, but a practitioner with genuine forensic depth and advanced skills.</p>
+
+    <div class="card" style="padding:0; overflow:hidden;">
+      <table>
+        <thead>
+          <tr>
+            <th>Course</th>
+            <th>Provider</th>
+            <th>Cost</th>
+            <th>Priority</th>
+            <th>Why It Matters</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Investigating Forensic Psychology (DD802)</strong></td>
+            <td>Open University &mdash; postgrad level</td>
+            <td><span class="badge badge-low">OU module fee</span></td>
+            <td><span class="badge badge-essential">High Value</span></td>
+            <td>Postgrad-level forensic knowledge; gets you ahead of MSc peers</td>
+          </tr>
+          <tr>
+            <td><strong>EMDR Foundation Training</strong></td>
+            <td>EMDR Association UK &mdash; accredited</td>
+            <td><span class="badge badge-low">Medium cost</span></td>
+            <td><span class="badge badge-essential">High Value</span></td>
+            <td>Premium trauma specialism; raises private practice rates significantly</td>
+          </tr>
+          <tr>
+            <td><strong>DBT Skills Introduction</strong></td>
+            <td>BACP-accredited online providers</td>
+            <td><span class="badge badge-low">Low cost</span></td>
+            <td><span class="badge badge-high">High</span></td>
+            <td>Highly valued in NHS Band 6/7 forensic and personality disorder work</td>
+          </tr>
+          <tr>
+            <td><strong>Risk Assessment in Mental Health</strong></td>
+            <td>RCPsych / NHS e-Learning Wales</td>
+            <td><span class="badge badge-free">Free&ndash;low</span></td>
+            <td><span class="badge badge-high">High</span></td>
+            <td>Essential competency for any forensic or secure setting role</td>
+          </tr>
+          <tr>
+            <td><strong>Safeguarding Adults &amp; Children Level 3</strong></td>
+            <td>NHS Wales e-Learning / NSPCC</td>
+            <td><span class="badge badge-free">Free</span></td>
+            <td><span class="badge badge-essential">Essential</span></td>
+            <td>Required for all NHS and regulated counselling roles</td>
+          </tr>
+          <tr>
+            <td><strong>Welsh Language &mdash; Level 1 Certificate</strong></td>
+            <td>Dysgu Cymraeg &mdash; learnwelsh.cymru</td>
+            <td><span class="badge badge-free">Free&ndash;low</span></td>
+            <td><span class="badge badge-high">High (Hywel Dda)</span></td>
+            <td>Desirable on all Hywel Dda job applications in West Wales</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- VOLUNTEER WORK -->
+    <div class="section-header">
+      <div class="section-icon" style="background:var(--light-green);">🤝</div>
+      <div>
+        <div class="section-period">West Wales &mdash; Within 40 Miles of SA31</div>
+        <h2>Volunteer &amp; Placement Work &mdash; Year 3: Go NHS Forensic</h2>
+      </div>
+    </div>
+
+    <p style="color:var(--muted); font-size:14px; margin-bottom:20px;">Year 3 placements should be as close as possible to your target employers. The aim is not just experience &mdash; it is to get a foot in the door at the organisations where you will be applying for paid roles in Summer 2029.</p>
+
+    <div class="vol-card" style="border-top-color:#8b0000;">
+      <div class="distance" style="color:#8b0000;">📍 In Carmarthen &mdash; Your Primary Target &nbsp;|&nbsp; &#9733; Most Important</div>
+      <h3>Cwm Seren Low Secure Forensic Unit &mdash; Hywel Dda UHB</h3>
+      <p>Cwm Seren is an 18-bed NHS Low Secure Forensic Unit based in Carmarthen, run by Hywel Dda University Health Board. This is the single most important organisation for your career. In Year 3, approach Hywel Dda's volunteering team directly and request a student placement, observer or volunteer support role within the unit or its adjacent Community Forensic Mental Health Team. The people you meet here will become your future referees and colleagues.</p>
+      <div class="vol-detail"><span>Role:</span> Student Placement / Volunteer Observer / Therapy Support</div>
+      <div class="vol-detail"><span>Contact:</span> Hywel Dda Volunteering &mdash; hduhb.nhs.wales/working-for-us/volunteering</div>
+      <div class="vol-detail"><span>Also contact:</span> Hywel Dda Psychology Department directly</div>
+      <div class="highlight-box">&#9733; A volunteer role at Cwm Seren or the Community Forensic MH Team before you apply for paid roles here is the single most powerful thing you can do for your career in Year 3.</div>
+    </div>
+
+    <div class="two-col">
+      <div class="vol-card">
+        <div class="distance">📍 ~25 miles &mdash; Swansea</div>
+        <h3>Swansea Bay UHB &mdash; Forensic Mental Health</h3>
+        <p>Swansea Bay University Health Board provides forensic mental health services for the wider South Wales population and works in close collaboration with Hywel Dda through the ARCH programme. Their Psychology department regularly takes student placements and advertises Band 4 associate practitioner roles &mdash; an ideal first paid step.</p>
+        <div class="vol-detail"><span>Role:</span> Student placement / Band 4 associate (when qualifying)</div>
+        <div class="vol-detail"><span>Contact:</span> sbuhb.nhs.wales/jobs</div>
+      </div>
+      <div class="vol-card">
+        <div class="distance">📍 ~25 miles &mdash; Swansea</div>
+        <h3>NACRO Cymru &mdash; Community Forensic</h3>
+        <p>NACRO Cymru works with offenders in the community across West Wales, supporting resettlement and rehabilitation. Their community support worker roles are an excellent entry point into paid forensic work, often advertised at a level accessible immediately on qualifying.</p>
+        <div class="vol-detail"><span>Role:</span> Volunteer then paid Resettlement / Support Worker</div>
+        <div class="vol-detail"><span>Contact:</span> nacro.org.uk/wales</div>
+      </div>
+    </div>
+
+    <div class="vol-card" style="border-top-color:var(--blue);">
+      <div class="distance" style="color:var(--blue);">📍 ~26 miles &mdash; Haverfordwest / Pembrokeshire</div>
+      <h3>Hywel Dda UHB &mdash; Withybush Hospital &amp; Pembrokeshire Mental Health</h3>
+      <p>Hywel Dda's Pembrokeshire services at Withybush Hospital include community mental health teams and primary care liaison, all within your 40-mile radius. In Year 3, approach the Psychology and Therapies department about a final-year student placement. Hywel Dda actively seeks to build relationships with students who will apply to work for them post-qualification.</p>
+      <div class="vol-detail"><span>Role:</span> Student placement / Therapy support</div>
+      <div class="vol-detail"><span>Contact:</span> hduhb.nhs.wales/working-for-us</div>
+    </div>
+
+    <div class="divider"></div>
+
+    <!-- APPLYING FOR JOBS -->
+    <div class="section-header">
+      <div class="section-icon" style="background:var(--light-blue);">💼</div>
+      <div>
+        <div class="section-period">Summer 2029 &mdash; You Are Ready</div>
+        <h2>Applying for Your First Paid Roles</h2>
+      </div>
+    </div>
+
+    <div class="alert-box">
+      <h3>&#9888; Start Applying Before You Fully Qualify</h3>
+      <p>NHS recruitment moves slowly. Begin applying for Band 4 and Band 5 roles in <strong>Spring 2029</strong> &mdash; three to four months before you formally qualify. NHS posts routinely have start dates 8&ndash;12 weeks after offer. If you wait until you hold your certificates in hand, you risk a gap between qualifying and starting work.</p>
+    </div>
+
+    <div class="card" style="padding:0; overflow:hidden;">
+      <table>
+        <thead>
+          <tr>
+            <th>Role</th>
+            <th>Employer</th>
+            <th>Band</th>
+            <th>Salary</th>
+            <th>Where to Apply</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Counsellor / Psychological Therapist</strong></td>
+            <td>Hywel Dda UHB &mdash; Carmarthen</td>
+            <td>Band 5</td>
+            <td>£31,000&ndash;£37,800</td>
+            <td>NHS Jobs / Hywel Dda website</td>
+          </tr>
+          <tr>
+            <td><strong>Forensic Support Practitioner</strong></td>
+            <td>Hywel Dda UHB &mdash; Cwm Seren</td>
+            <td>Band 5/6</td>
+            <td>£31,000&ndash;£46,600</td>
+            <td>NHS Jobs &mdash; set alert now</td>
+          </tr>
+          <tr>
+            <td><strong>Psychology Assistant / Associate</strong></td>
+            <td>Hywel Dda / Swansea Bay UHB</td>
+            <td>Band 4</td>
+            <td>£26,530&ndash;£29,114</td>
+            <td>NHS Jobs &mdash; good entry point</td>
+          </tr>
+          <tr>
+            <td><strong>Counsellor &mdash; Addiction Services</strong></td>
+            <td>Forward Trust / DAN Wales</td>
+            <td>Charity Band</td>
+            <td>£28,000&ndash;£36,000</td>
+            <td>forwardtrust.org.uk / danwales.org</td>
+          </tr>
+          <tr>
+            <td><strong>Community Mental Health Practitioner</strong></td>
+            <td>Hywel Dda UHB &mdash; CMHT</td>
+            <td>Band 5</td>
+            <td>£31,000&ndash;£37,800</td>
+            <td>NHS Jobs &mdash; Carmarthenshire</td>
+          </tr>
+          <tr>
+            <td><strong>Resettlement &amp; Support Worker</strong></td>
+            <td>NACRO Cymru / St Giles Trust</td>
+            <td>Charity Band</td>
+            <td>£26,000&ndash;£32,000</td>
+            <td>nacro.org.uk / stgilestrust.org.uk</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- SALARY SECTION -->
+    <div class="section-header">
+      <div class="section-icon" style="background:var(--light-green);">💷</div>
+      <div>
+        <div class="section-period">Full Pay Trajectory</div>
+        <h2>Your Career Earnings Trajectory</h2>
+      </div>
+    </div>
+
+    <div class="salary-grid">
+      <div class="salary-card entry">
+        <div class="label">Entry &mdash; On Qualifying (2029)</div>
+        <div class="amount">£31,000&ndash;£37,800</div>
+        <div class="detail">NHS Band 5 Counsellor &nbsp;|&nbsp; Hywel Dda UHB or Swansea Bay UHB</div>
+      </div>
+      <div class="salary-card mid">
+        <div class="label">Mid-Career (Year 4&ndash;6 Post-Qual)</div>
+        <div class="amount">£38,700&ndash;£46,600</div>
+        <div class="detail">NHS Band 6 &nbsp;|&nbsp; Forensic specialism &nbsp;|&nbsp; Cwm Seren / Community Forensic</div>
+      </div>
+      <div class="salary-card senior">
+        <div class="label">Senior (Year 6&ndash;8 Post-Qual + MSc)</div>
+        <div class="amount">£47,800&ndash;£54,700</div>
+        <div class="detail">NHS Band 7 Psychotherapist &nbsp;|&nbsp; Lead Counsellor &nbsp;|&nbsp; BACP Accredited</div>
+      </div>
+      <div class="salary-card private">
+        <div class="label">Private Practice (Alongside NHS)</div>
+        <div class="amount">£80&ndash;£120 / hr</div>
+        <div class="detail">Forensic trauma specialism &nbsp;|&nbsp; EMDR qualified &nbsp;|&nbsp; West Wales niche</div>
+      </div>
+    </div>
+
+    <!-- POST QUAL PATHWAYS -->
+    <div class="section-header">
+      <div class="section-icon" style="background:#fef8e6);">🚀</div>
+      <div>
+        <div class="section-period">Beyond Year 3 &mdash; The Road Ahead</div>
+        <h2>Post-Qualification Pathways</h2>
+      </div>
+    </div>
+
+    <div class="pathway-grid">
+      <div class="pathway-card">
+        <div class="icon">🏥</div>
+        <h3>NHS Forensic Psychotherapist</h3>
+        <p>Build toward Band 7&ndash;8a via BACP Accreditation + specialist forensic CPD. The most direct route using your existing qualifications in Carmarthen.</p>
+        <span class="timeline-note">Year 4&ndash;6</span>
+      </div>
+      <div class="pathway-card">
+        <div class="icon">🎓</div>
+        <h3>MSc Forensic Psychology</h3>
+        <p>With BPS GBC from your OU degree, an MSc + 2 years supervised practice leads to Chartered Forensic Psychologist status &mdash; the highest forensic qualification.</p>
+        <span class="timeline-note">Year 4&ndash;7</span>
+      </div>
+      <div class="pathway-card">
+        <div class="icon">🧠</div>
+        <h3>EMDR + Trauma Specialism</h3>
+        <p>EMDR Foundation (Year 3) followed by Practitioner and Consultant levels. Commands premium private rates and opens specialist NHS trauma posts.</p>
+        <span class="timeline-note">Year 3&ndash;5</span>
+      </div>
+      <div class="pathway-card">
+        <div class="icon">⚖️</div>
+        <h3>Expert Witness Practice</h3>
+        <p>With your BSc Forensics + Diploma + 5 years experience, you become eligible to train as a psychological expert witness for courts and tribunals.</p>
+        <span class="timeline-note">Year 7+</span>
+      </div>
+      <div class="pathway-card">
+        <div class="icon">🏢</div>
+        <h3>Private Practice Specialist</h3>
+        <p>Forensic counselling in West Wales is an underserved niche. A private practice specialising in trauma, criminal justice and addiction clients is highly viable.</p>
+        <span class="timeline-note">Year 4+ alongside NHS</span>
+      </div>
+      <div class="pathway-card">
+        <div class="icon">📚</div>
+        <h3>DClinPsy Route</h3>
+        <p>If BPS GBC is confirmed, your OU degree + diploma + experience makes you eligible to apply for the Doctorate in Clinical Psychology &mdash; the most prestigious route of all.</p>
+        <span class="timeline-note">Year 4&ndash;10</span>
+      </div>
+    </div>
+
+    <!-- QUALIFICATION TIMELINE -->
+    <div class="section-header">
+      <div class="section-icon" style="background:var(--light-green);">📅</div>
+      <div>
+        <div class="section-period">Your Full Journey</div>
+        <h2>3-Year Timeline at a Glance</h2>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="timeline">
+        <div class="timeline-item">
+          <div class="time">September 2026</div>
+          <h3>Start OU BSc &amp; Diploma Year 1 &mdash; Secure DBS, Begin Volunteering</h3>
+          <p>First OpenLearn certificates, MHFA, Samaritans or Llanelli Mind volunteer role, BACP Student Membership.</p>
+        </div>
+        <div class="timeline-item">
+          <div class="time">Summer 2027</div>
+          <h3>Year 1 Complete &mdash; Foundation Built</h3>
+          <p>3+ certificates, 1&ndash;2 volunteer roles active, OU Stage 1 done, Diploma Year 1 passed.</p>
+        </div>
+        <div class="timeline-item">
+          <div class="time">September 2027</div>
+          <h3>Year 2 Begins &mdash; Forensic Specialism Takes Shape</h3>
+          <p>Trauma-informed training, HMP Swansea volunteer application, motivational interviewing, 100+ client hours building.</p>
+        </div>
+        <div class="timeline-item">
+          <div class="time">Summer 2028</div>
+          <h3>Year 2 Complete &mdash; Forensic Profile Established</h3>
+          <p>5+ certificates, prison volunteer role active, 100+ hours, OU Stage 2 complete, dissertation topic confirmed.</p>
+        </div>
+        <div class="timeline-item">
+          <div class="time">September 2028</div>
+          <h3>Year 3 Begins &mdash; Final Push</h3>
+          <p>OU Stage 3, dissertation research, Cwm Seren placement approach, EMDR foundation, risk assessment, Welsh language.</p>
+        </div>
+        <div class="timeline-item">
+          <div class="time">Spring 2029</div>
+          <h3>Begin Applying for Paid Roles</h3>
+          <p>NHS Jobs alerts active, Band 4&ndash;5 applications submitted before formal qualification.</p>
+        </div>
+        <div class="timeline-item">
+          <div class="time">Summer 2029</div>
+          <h3>&#127881; Qualify &amp; Launch &mdash; BSc + Diploma in Hand</h3>
+          <p>BACP Registered Member, first paid role secured, BACP Accreditation pathway begins, post-qualification supervisor identified.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- FINAL CHECKLIST -->
+    <div class="checklist">
+      <h2>&#10003; Year 3 &mdash; Qualifying Year Checklist</h2>
+      <div class="check-item">
+        <div class="check-icon">&#10003;</div>
+        <div><strong>BSc Psychology &amp; Forensics completed</strong> &mdash; BPS GBC status confirmed</div>
+      </div>
+      <div class="check-item">
+        <div class="check-icon">&#10003;</div>
+        <div><strong>Diploma in Counselling &amp; Psychotherapy completed</strong> &mdash; all hours, supervision and personal therapy signed off</div>
+      </div>
+      <div class="check-item">
+        <div class="check-icon">&#10003;</div>
+        <div><strong>BACP Registered Member status applied for</strong> immediately on qualifying</div>
+      </div>
+      <div class="check-item">
+        <div class="check-icon">&#10003;</div>
+        <div><strong>Dissertation submitted</strong> with forensic or therapeutic focus &mdash; a career asset in every interview</div>
+      </div>
+      <div class="check-item">
+        <div class="check-icon">&#10003;</div>
+        <div><strong>EMDR Foundation Training completed or booked</strong></div>
+      </div>
+      <div class="check-item">
+        <div class="check-icon">&#10003;</div>
+        <div><strong>Safeguarding Adults &amp; Children Level 3 completed</strong></div>
+      </div>
+      <div class="check-item">
+        <div class="check-icon">&#10003;</div>
+        <div><strong>Risk Assessment in Mental Health completed</strong></div>
+      </div>
+      <div class="check-item">
+        <div class="check-icon">&#10003;</div>
+        <div><strong>8+ short course certificates</strong> accumulated across all three years</div>
+      </div>
+      <div class="check-item">
+        <div class="check-icon">&#10003;</div>
+        <div><strong>Cwm Seren or Hywel Dda placement or contact made</strong> &mdash; foot in the door before applying</div>
+      </div>
+      <div class="check-item">
+        <div class="check-icon">&#10003;</div>
+        <div><strong>First paid role applications submitted</strong> from Spring 2029 &mdash; before you formally qualify</div>
+      </div>
+      <div class="check-item">
+        <div class="check-icon">&#10003;</div>
+        <div><strong>Post-qualification clinical supervisor identified</strong> for BACP Accreditation hours</div>
+      </div>
+      <div class="check-item">
+        <div class="check-icon">&#10003;</div>
+        <div><strong>Welsh Language Level 1</strong> &mdash; or actively studying &mdash; for Hywel Dda applications</div>
+      </div>
+    </div>
+
+    <!-- FINAL BANNER -->
+    <div class="final-banner">
+      <h2>You Will Be Ready. And You Will Stand Out.</h2>
+      <p>Very few practitioners in West Wales will hold your combination of qualifications. You will be able to do what most counsellors and most forensic psychology graduates cannot &mdash; bridge therapeutic practice and criminal justice in one person. That is rare, valuable, and in growing demand across Hywel Dda, HMP Swansea, and the third sector across your region.</p>
+      <div class="qual-pills">
+        <div class="qual-pill">&#10003; BSc Psychology &amp; Forensics</div>
+        <div class="qual-pill">&#10003; Diploma in Counselling &amp; Psychotherapy</div>
+        <div class="qual-pill">&#10003; BACP Registered Member</div>
+        <div class="qual-pill">&#10003; BPS Graduate Basis for Chartership</div>
+        <div class="qual-pill">&#10003; Trauma-Informed Practitioner</div>
+        <div class="qual-pill">&#10003; 3 Years West Wales Experience</div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- FOOTER -->
+  <div class="footer">
+    <p>BSc Psychology &amp; Forensics + Diploma in Counselling &amp; Psychotherapy &nbsp;|&nbsp; SA31 &mdash; West Wales</p>
+    <div class="page-num">Year 3 of 3</div>
+  </div>
+
+</div>
+</body>
+</html>

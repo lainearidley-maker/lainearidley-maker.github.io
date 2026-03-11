@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Year 1 Career Roadmap — Build Your Foundation</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Source+Sans+3:wght@300;400;600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --navy: #1a2744;
+    --blue: #2356a8;
+    --mid: #3a72c8;
+    --accent: #e8a020;
+    --green: #1e6b4a;
+    --light-green: #eaf5ee;
+    --light-blue: #eaf0fb;
+    --light-grey: #f5f6f8;
+    --text: #1c1e26;
+    --muted: #5a6070;
+    --white: #ffffff;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: 'Source Sans 3', sans-serif;
+    background: #eef1f7;
+    color: var(--text);
+    font-size: 15px;
+    line-height: 1.7;
+  }
+  .page { max-width: 960px; margin: 0 auto; padding-bottom: 60px; }
+
+  .header {
+    background: linear-gradient(135deg, var(--navy) 0%, var(--blue) 70%, var(--mid) 100%);
+    padding: 56px 48px 44px;
+    position: relative;
+    overflow: hidden;
+  }
+  .header::before {
+    content: ''; position: absolute; top: -80px; right: -80px;
+    width: 320px; height: 320px; border-radius: 50%;
+    background: rgba(255,255,255,0.05);
+  }
+  .header::after {
+    content: ''; position: absolute; bottom: -50px; left: 240px;
+    width: 220px; height: 220px; border-radius: 50%;
+    background: rgba(232,160,32,0.1);
+  }
+  .series-label {
+    font-size: 11px; font-weight: 700; letter-spacing: 3px;
+    text-transform: uppercase; color: var(--accent); margin-bottom: 14px;
+  }
+  .header h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 44px; font-weight: 900;
+    color: #fff; line-height: 1.15; margin-bottom: 10px;
+  }
+  .header h1 span { color: var(--accent); }
+  .header .subtitle {
+    color: rgba(255,255,255,0.75);
+    font-size: 15px; font-weight: 300; margin-bottom: 28px;
+  }
+  .header-pills { display: flex; gap: 10px; flex-wrap: wrap; }
+  .pill {
+    background: rgba(255,255,255,0.12);
+    border: 1px solid rgba(255,255,255,0.2);
+    color: #fff; font-size: 12px; font-weight: 600;
+    padding: 6px 14px; border-radius: 20px;
+  }
+
+  .nav-strip { background: var(--navy); display: flex; }
+  .nav-item {
+    flex: 1; text-align: center; padding: 14px 8px;
+    font-size: 12px; font-weight: 700; letter-spacing: 1px;
+    text-transform: uppercase; color: rgba(255,255,255,0.4);
+    border-right: 1px solid rgba(255,255,255,0.08);
+  }
+  .nav-item.active { color: var(--accent); border-bottom: 3px solid var(--accent); }
+
+  .content { padding: 40px 48px; }
+
+  .intro-box {
+    background: var(--white);
+    border-left: 5px solid var(--blue);
+    border-radius: 0 8px 8px 0;
+    padding: 24px 28px; margin-bottom: 36px;
+    box-shadow: 0 2px 12px rgba(35,86,168,0.07);
+  }
+  .intro-box h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 20px; color: var(--navy); margin-bottom: 10px;
+  }
+  .intro-box p { color: var(--muted); font-size: 14.5px; }
+
+  .section-header { display: flex; align-items: center; gap: 14px; margin: 40px 0 18px; }
+  .section-icon {
+    width: 42px; height: 42px; border-radius: 10px;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 20px; flex-shrink: 0;
+  }
+  .section-header h2 { font-family: 'Playfair Display', serif; font-size: 22px; color: var(--navy); }
+  .section-period { font-size: 12px; font-weight: 600; color: var(--muted); letter-spacing: 1px; text-transform: uppercase; }
+
+  .card {
+    background: var(--white); border-radius: 10px;
+    padding: 24px 28px; margin-bottom: 16px;
+    box-shadow: 0 2px 10px rgba(26,39,68,0.06);
+  }
+  .card h3 { font-size: 16px; font-weight: 700; color: var(--navy); margin-bottom: 8px; }
+  .card p { color: var(--muted); font-size: 14px; margin-bottom: 10px; }
+  .card-tag {
+    display: inline-block; font-size: 11px; font-weight: 700;
+    letter-spacing: 1px; text-transform: uppercase;
+    padding: 3px 10px; border-radius: 4px; margin-bottom: 10px;
+  }
+  .tag-blue { background: var(--light-blue); color: var(--blue); }
+  .tag-green { background: var(--light-green); color: var(--green); }
+  .tag-orange { background: #fef3e2; color: #b57a10; }
+
+  .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-bottom: 16px; }
+
+  .vol-card {
+    background: var(--white); border-radius: 10px;
+    padding: 22px 26px; margin-bottom: 16px;
+    box-shadow: 0 2px 10px rgba(26,39,68,0.06);
+    border-top: 4px solid var(--green);
+  }
+  .vol-card h3 { font-size: 15px; font-weight: 700; color: var(--navy); margin-bottom: 4px; }
+  .vol-card .distance {
+    font-size: 12px; font-weight: 600; color: var(--green);
+    text-transform: uppercase; letter-spacing: 1px; margin-bottom: 10px;
+  }
+  .vol-card p { font-size: 13.5px; color: var(--muted); margin-bottom: 10px; }
+  .vol-detail { font-size: 13px; color: var(--text); padding: 2px 0; }
+  .vol-detail span { font-weight: 600; color: var(--navy); }
+
+  table { width: 100%; border-collapse: collapse; font-size: 13.5px; }
+  thead tr { background: var(--navy); }
+  thead th { padding: 12px 14px; text-align: left; color: #fff; font-weight: 600; font-size: 12px; letter-spacing: 0.5px; }
+  tbody tr:nth-child(even) { background: var(--light-grey); }
+  tbody tr:nth-child(odd) { background: var(--white); }
+  tbody td { padding: 11px 14px; color: var(--text); border-bottom: 1px solid #e8eaf0; }
+  .badge { display: inline-block; padding: 2px 8px; border-radius: 4px; font-size: 11px; font-weight: 700; }
+  .badge-free { background: var(--light-green); color: var(--green); }
+  .badge-low { background: #fef3e2; color: #b57a10; }
+  .badge-high { background: var(--light-blue); color: var(--blue); }
+
+  .checklist { background: var(--light-green); border-radius: 10px; padding: 28px 32px; margin-top: 36px; }
+  .checklist h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 20px; color: var(--green); margin-bottom: 18px;
+  }
+  .check-item {
+    display: flex; align-items: flex-start; gap: 12px;
+    padding: 9px 0; border-bottom: 1px solid rgba(30,107,74,0.12);
+    font-size: 14px;
+  }
+  .check-item:last-child { border-bottom: none; }
+  .check-icon {
+    width: 22px; height: 22px; border-radius: 50%;
+    background: var(--green); color: #fff;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 12px; flex-shrink: 0; margin-top: 1px;
+  }
+  .check-item strong { color: var(--navy); }
+
+  .salary-band {
+    background: linear-gradient(135deg, var(--navy), var(--blue));
+    border-radius: 10px; padding: 28px 32px; margin-top: 16px;
+    color: #fff; display: flex; align-items: center;
+    justify-content: space-between; flex-wrap: wrap; gap: 20px;
+  }
+  .salary-band h3 { font-size: 14px; font-weight: 300; opacity: 0.8; margin-bottom: 4px; }
+  .salary-amount { font-family: 'Playfair Display', serif; font-size: 32px; font-weight: 700; color: var(--accent); }
+  .salary-note { font-size: 12px; opacity: 0.65; margin-top: 4px; }
+
+  .divider { height: 1px; background: #dde2ee; margin: 36px 0; }
+
+  .footer {
+    background: var(--navy); padding: 20px 48px;
+    display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px;
+  }
+  .footer p { color: rgba(255,255,255,0.45); font-size: 12px; }
+  .footer .page-num { color: var(--accent); font-weight: 700; font-size: 13px; }
+</style>
+</head>
+<body>
+<div class="page">
+
+  <div class="header">
+    <div class="series-label">3-Year Career Roadmap &mdash; BSc Psychology &amp; Forensics + Diploma in Counselling &amp; Psychotherapy</div>
+    <h1>Year 1: <span>Build Your Foundation</span></h1>
+    <div class="subtitle">September 2026 &ndash; Summer 2027 &nbsp;&bull;&nbsp; Carmarthen &amp; West Wales (SA31 | 40-mile radius)</div>
+    <div class="header-pills">
+      <div class="pill">OU Stage 1</div>
+      <div class="pill">Diploma Year 1</div>
+      <div class="pill">First Volunteer Roles</div>
+      <div class="pill">3+ Short Course Certificates</div>
+      <div class="pill">Enhanced DBS</div>
+    </div>
+  </div>
+
+  <div class="nav-strip">
+    <div class="nav-item active">&#9679; Year 1 &mdash; Foundation</div>
+    <div class="nav-item">Year 2 &mdash; Specialism</div>
+    <div class="nav-item">Year 3 &mdash; Qualify &amp; Launch</div>
+  </div>
+
+  <div class="content">
+
+    <div class="intro-box">
+      <h2>Why Year 1 Sets Everything Up</h2>
+      <p>Year 1 is about laying solid groundwork simultaneously across three tracks: your OU degree, your counselling diploma, and real-world experience. Getting your DBS early, securing your first volunteer role, and stacking free OU OpenLearn certificates means you enter Year 2 with a CV that already stands out. Your location in Carmarthen is a genuine advantage &mdash; Hywel Dda University Health Board's Low Secure Forensic Unit (Cwm Seren) is right on your doorstep, and building local connections now pays dividends later.</p>
+    </div>
+
+    <!-- DEGREE -->
+    <div class="section-header">
+      <div class="section-icon" style="background:var(--light-blue);">🎓</div>
+      <div>
+        <div class="section-period">Open University</div>
+        <h2>Degree: OU Stage 1 Modules</h2>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-tag tag-blue">BSc Psychology &amp; Forensics &mdash; Year 1</div>
+      <h3>What You Will Cover</h3>
+      <p>Stage 1 introduces key psychological theories, research methods, and core debates across psychology and forensic practice. Every theory you learn here becomes a framework you will reference in client sessions and job interviews for the rest of your career.</p>
+      <ul style="padding-left:18px; color:#5a6070; font-size:14px; margin-top:6px;">
+        <li>Core psychological perspectives and major theoretical models</li>
+        <li>Introduction to research methods &mdash; qualitative and quantitative</li>
+        <li>Foundations of forensic psychology &mdash; crime, behaviour, justice</li>
+        <li>Biological, social and developmental psychology</li>
+      </ul>
+    </div>
+
+    <div class="card" style="border-left:4px solid var(--accent);">
+      <div class="card-tag tag-orange">Strategic Tip</div>
+      <p style="margin:0; font-size:14px;"><strong style="color:var(--navy);">Choose your dissertation topic early.</strong> Your final-year research project (Year 3) is a major talking point in every interview. Begin thinking now about a forensic or therapeutic angle &mdash; something like trauma in offender rehabilitation, or counselling outcomes in secure settings in West Wales. Plant the seed in Year 1.</p>
+    </div>
+
+    <!-- DIPLOMA -->
+    <div class="section-header">
+      <div class="section-icon" style="background:var(--light-green);">📋</div>
+      <div>
+        <div class="section-period">Counselling Diploma</div>
+        <h2>Diploma Year 1: Theory &amp; Self-Awareness</h2>
+      </div>
+    </div>
+
+    <div class="two-col">
+      <div class="card">
+        <div class="card-tag tag-green">Core Focus</div>
+        <h3>Theoretical Models</h3>
+        <p>Absorb the three major counselling orientations thoroughly. You will draw on all three throughout your career regardless of which you specialise in later.</p>
+        <ul style="padding-left:18px; color:#5a6070; font-size:14px;">
+          <li>Person-Centred Therapy (Rogers)</li>
+          <li>Cognitive Behavioural Therapy (CBT)</li>
+          <li>Psychodynamic Therapy (Freud / object relations)</li>
+        </ul>
+      </div>
+      <div class="card">
+        <div class="card-tag tag-green">Essential Action</div>
+        <h3>Start Your Reflective Journal &mdash; Now</h3>
+        <p>BACP accreditation requires substantial evidence of reflective practice. Starting your journal from day one means three years of evidence by the time you apply. Record every client session, every supervision, every moment of growth or difficulty.</p>
+      </div>
+    </div>
+
+    <div class="card" style="border-left:4px solid var(--green);">
+      <div class="card-tag tag-green">Supervised Hours</div>
+      <h3>Log Client Hours From Day One</h3>
+      <p>Most diplomas require 100+ supervised client hours by qualification. Keep a meticulous log from your very first session &mdash; date, duration, client code, presenting issue, supervision received. This log is your evidence base for BACP accreditation post-qualification.</p>
+    </div>
+
+    <!-- SHORT COURSES -->
+    <div class="section-header">
+      <div class="section-icon" style="background:#fef3e2;">📜</div>
+      <div>
+        <div class="section-period">CV Building</div>
+        <h2>Short Courses &amp; Certificates &mdash; Year 1</h2>
+      </div>
+    </div>
+
+    <div class="card" style="padding:0; overflow:hidden;">
+      <table>
+        <thead>
+          <tr>
+            <th>Course</th>
+            <th>Provider</th>
+            <th>Duration</th>
+            <th>Cost</th>
+            <th>CV Value</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Making Sense of Mental Health Problems</strong></td>
+            <td>OU OpenLearn</td>
+            <td>8 hrs</td>
+            <td><span class="badge badge-free">Free</span></td>
+            <td><span class="badge badge-high">High</span></td>
+          </tr>
+          <tr>
+            <td><strong>Forensic Psychology</strong></td>
+            <td>OU OpenLearn</td>
+            <td>8 hrs</td>
+            <td><span class="badge badge-free">Free</span></td>
+            <td><span class="badge badge-high">High &mdash; Direct specialism</span></td>
+          </tr>
+          <tr>
+            <td><strong>Mindfulness in Mental Health &amp; Prison Settings</strong></td>
+            <td>OU OpenLearn</td>
+            <td>6 hrs</td>
+            <td><span class="badge badge-free">Free</span></td>
+            <td><span class="badge badge-high">High &mdash; Forensic focus</span></td>
+          </tr>
+          <tr>
+            <td><strong>An Introduction to Counselling</strong></td>
+            <td>OU OpenLearn</td>
+            <td>8 hrs</td>
+            <td><span class="badge badge-free">Free</span></td>
+            <td><span class="badge badge-high">Medium</span></td>
+          </tr>
+          <tr>
+            <td><strong>Mental Health First Aid (MHFA)</strong></td>
+            <td>St John Cymru / MHFA England</td>
+            <td>2 days</td>
+            <td><span class="badge badge-low">Low cost</span></td>
+            <td><span class="badge badge-high">High &mdash; Widely recognised</span></td>
+          </tr>
+          <tr>
+            <td><strong>SafeTalk Suicide Awareness</strong></td>
+            <td>Free via NHS Wales / PAPYRUS</td>
+            <td>Half day</td>
+            <td><span class="badge badge-free">Free</span></td>
+            <td><span class="badge badge-high">High &mdash; Required in most MH roles</span></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="card" style="border-left:4px solid var(--accent); margin-top:16px;">
+      <div class="card-tag tag-orange">Note</div>
+      <p style="margin:0; font-size:14px;"><strong style="color:var(--navy);">Each OU OpenLearn course gives you a Statement of Participation</strong> &mdash; a downloadable certificate. These are free, respected, and directly relevant. Aim for at least 3 in Year 1. Visit <strong>openlearn.open.ac.uk</strong> to browse all available courses.</p>
+    </div>
+
+    <!-- VOLUNTEER WORK -->
+    <div class="section-header">
+      <div class="section-icon" style="background:var(--light-green);">🤝</div>
+      <div>
+        <div class="section-period">West Wales &mdash; Within 40 Miles of SA31</div>
+        <h2>Volunteer Work &mdash; Year 1</h2>
+      </div>
+    </div>
+
+    <p style="color:var(--muted); font-size:14px; margin-bottom:20px;">Aim to secure at least one volunteer role by Christmas 2026. Two by the end of Year 1 is excellent. Prioritise getting your <strong>enhanced DBS immediately</strong> &mdash; most organisations cannot proceed without it and it can take several weeks to arrive.</p>
+
+    <div class="two-col">
+      <div class="vol-card">
+        <div class="distance">📍 ~14 miles &mdash; Llanelli</div>
+        <h3>Llanelli Mind</h3>
+        <p>Llanelli Mind has provided mental health services across Carmarthenshire since 1986. Their counselling service spans the Swansea Valley and they offer structured volunteer roles in their Day Opportunities service &mdash; ideal for building core support skills alongside your diploma.</p>
+        <div class="vol-detail"><span>Role:</span> Peer Support Volunteer / Day Opportunities Support</div>
+        <div class="vol-detail"><span>Commitment:</span> Approx. 1 day per week</div>
+        <div class="vol-detail"><span>Contact:</span> llanelli-mind.org.uk</div>
+      </div>
+      <div class="vol-card">
+        <div class="distance">📍 In Carmarthen &mdash; Your Doorstep</div>
+        <h3>Glangwili Hospital Befriender</h3>
+        <p>Volunteering Wales lists a Hospital Befriender opportunity at Glangwili General Hospital. You support patients who feel isolated, building therapeutic communication skills in a clinical environment right in your home town &mdash; and inside your future NHS employer's estate.</p>
+        <div class="vol-detail"><span>Role:</span> Hospital Befriender / Patient Support Volunteer</div>
+        <div class="vol-detail"><span>Commitment:</span> Flexible</div>
+        <div class="vol-detail"><span>Contact:</span> carmarthenshire.volunteering-wales.net</div>
+      </div>
+    </div>
+
+    <div class="vol-card" style="border-top-color:var(--blue);">
+      <div class="distance" style="color:var(--blue);">📍 ~25 miles &mdash; Swansea</div>
+      <h3>Samaritans &mdash; Swansea Branch</h3>
+      <p>Samaritans has nine Welsh branches and Swansea is your nearest. This is gold-standard CV experience for any counselling career. The active listening skills you develop here directly mirror what your diploma teaches, and employers universally respect Samaritans experience on a CV.</p>
+      <div class="vol-detail"><span>Role:</span> Listening Volunteer (telephone, face-to-face, email support)</div>
+      <div class="vol-detail"><span>Commitment:</span> Minimum 1 year; flexible shifts including evenings and weekends</div>
+      <div class="vol-detail"><span>Contact:</span> samaritans.org/branches &mdash; search Swansea</div>
+    </div>
+
+    <div class="card" style="border-left:4px solid var(--blue); margin-top:4px;">
+      <div class="card-tag tag-blue">Also Action in Year 1</div>
+      <h3>BACP Student Membership</h3>
+      <p>Apply for BACP Student Membership as soon as you begin your diploma. It costs very little, signals professional seriousness to employers, gives you access to ethical frameworks and the BACP journal, and sets you on the path toward accreditation post-qualification.</p>
+      <div class="vol-detail" style="margin-top:8px;"><span>Contact:</span> bacp.co.uk/membership</div>
+    </div>
+
+    <div class="divider"></div>
+
+    <!-- SALARY -->
+    <div class="section-header">
+      <div class="section-icon" style="background:var(--light-blue);">💷</div>
+      <div>
+        <div class="section-period">Pay Context</div>
+        <h2>Where This Leads &mdash; Entry Salary on Qualifying (2029)</h2>
+      </div>
+    </div>
+
+    <div class="salary-band">
+      <div>
+        <h3>NHS Band 5 Counsellor &mdash; Entry level on qualifying</h3>
+        <div class="salary-amount">£31,000 &ndash; £37,800</div>
+        <div class="salary-note">Hywel Dda UHB / Swansea Bay UHB &nbsp;|&nbsp; Carmarthen, Llanelli, Swansea</div>
+      </div>
+      <div style="text-align:right;">
+        <h3>With forensic specialism &mdash; Band 6</h3>
+        <div class="salary-amount" style="font-size:26px;">£38,700 &ndash; £46,600</div>
+        <div class="salary-note">Cwm Seren Forensic Unit &nbsp;|&nbsp; Community Forensic MH Team</div>
+      </div>
+    </div>
+
+    <!-- CHECKLIST -->
+    <div class="checklist">
+      <h2>&#10003; Year 1 End-of-Year Checklist</h2>
+      <div class="check-item">
+        <div class="check-icon">&#10003;</div>
+        <div><strong>Enhanced DBS certificate obtained</strong> &mdash; apply immediately, this unlocks every volunteer and placement role</div>
+      </div>
+      <div class="check-item">
+        <div class="check-icon">&#10003;</div>
+        <div><strong>OU Stage 1 modules underway and on track</strong></div>
+      </div>
+      <div class="check-item">
+        <div class="check-icon">&#10003;</div>
+        <div><strong>Diploma Year 1 complete</strong> &mdash; reflective journal started from day one</div>
+      </div>
+      <div class="check-item">
+        <div class="check-icon">&#10003;</div>
+        <div><strong>3+ OU OpenLearn Statements of Participation</strong> earned and added to your CV</div>
+      </div>
+      <div class="check-item">
+        <div class="check-icon">&#10003;</div>
+        <div><strong>Mental Health First Aid (MHFA) Certificate</strong> completed</div>
+      </div>
+      <div class="check-item">
+        <div class="check-icon">&#10003;</div>
+        <div><strong>SafeTalk or ASIST suicide awareness training</strong> completed &mdash; free via NHS Wales</div>
+      </div>
+      <div class="check-item">
+        <div class="check-icon">&#10003;</div>
+        <div><strong>1&ndash;2 volunteer roles active</strong> &mdash; hours logged and references being built</div>
+      </div>
+      <div class="check-item">
+        <div class="check-icon">&#10003;</div>
+        <div><strong>BACP Student Membership applied for</strong></div>
+      </div>
+      <div class="check-item">
+        <div class="check-icon">&#10003;</div>
+        <div><strong>Dissertation topic area identified</strong> &mdash; forensic or therapeutic angle for Year 3</div>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="footer">
+    <p>BSc Psychology &amp; Forensics + Diploma in Counselling &amp; Psychotherapy &nbsp;|&nbsp; SA31 &mdash; West Wales</p>
+    <div class="page-num">Year 1 of 3</div>
+  </div>
+
+</div>
+</body>
+</html>
